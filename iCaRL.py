@@ -134,7 +134,7 @@ class iCaRLmodel:
                 loss_value.backward()
                 opt.step()
                 print('Epoch:%d, Step:%d, Loss:%.3f' % (epoch, step, loss_value.item()))
-            print("========================================)
+            print("========================================")
             accuracy = self._test(self.test_loader, 1)
             print('Epoch:%d, Accuracy:%.3f' % (epoch, accuracy))
         return accuracy
