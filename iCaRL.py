@@ -133,9 +133,10 @@ class iCaRLmodel:
                 opt.zero_grad()
                 loss_value.backward()
                 opt.step()
-                print('epoch:%d,step:%d,loss:%.3f' % (epoch, step, loss_value.item()))
+                print('Epoch:%d, Step:%d, Loss:%.3f' % (epoch, step, loss_value.item()))
+            print("========================================)
             accuracy = self._test(self.test_loader, 1)
-            print('epoch:%d,accuracy:%.3f' % (epoch, accuracy))
+            print('Epoch:%d, Accuracy:%.3f' % (epoch, accuracy))
         return accuracy
 
     def _test(self, testloader, mode):
