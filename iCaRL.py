@@ -9,7 +9,7 @@ from myNetwork import network
 from iCIFAR100 import iCIFAR100
 from torch.utils.data import DataLoader
 
-device = torch.device("cuda:2" if torch.cuda.is_available() else "cpu")
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 def get_one_hot(target,num_class):
     one_hot=torch.zeros(target.shape[0],num_class).to(device)
